@@ -1,0 +1,31 @@
+<!-- 
+Charts are drawn using a d3-based rickshaw.js
+
+To render chart, use javascript function renderLinePlot(target, data)
+
+-->
+
+<section class="slide basicslide" id="chart">
+	
+		<h2>This slide charts data</h2>
+
+		<div id="chart">
+			<div class="chartcontainer">
+					<div id="chart_container" style="margin: 15px;"></div>
+			</div>
+		</div>
+
+</section>
+<script type="text/javascript">
+	
+	var plotData = [{
+		name: 'Fibonacci',
+		data: convertPlotData([0,1,1,2,3,4,7,11,28],1,1)
+	}, {
+		name: 'Random data',
+		data: convertPlotData([10,3,15,5,20,3,5],1,1)
+	}];
+
+	renderLinePlot(document.querySelector('#chart_container'), plotData);
+
+</script>

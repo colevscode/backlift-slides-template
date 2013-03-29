@@ -1,0 +1,30 @@
+.com { color: #fff; }
+.lit { color: #fff; }
+.pun, .opn, .clo { color: #aaa; }
+.fun { color: #fff; }
+.str, .atv { color: #fff; }
+.kwd, .prettyprint .tag { color: #FFC540; }
+.typ, .atn, .dec, .var { color: #38B2CE; }
+.pln { color: #fff; }
+
+.prettyprint {
+  padding: 8px;
+  border: 1px solid #555 !important; 
+  background: rgba(0,0,0,0.3);
+  border-radius: 5px;
+}
+.prettyprint.linenums {
+ -webkit-box-shadow: inset 50px 0 0 #222;
+     -moz-box-shadow: inset 50px 0 0 #222;
+          box-shadow: inset 50px 0 0 #222;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 40px; /* IE indents via margin-left */
+}
+ol.linenums li {
+  padding-left: 10px;
+  color: #666;
+  line-height: 20px;
+}

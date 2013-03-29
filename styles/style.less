@@ -1,0 +1,221 @@
+// global backround
+@background: url('../images/debut_dark.png') #333;
+
+
+// font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800,300');
+@title_font_family: 'Open Sans', sans-serif;
+@body_font_family: 'Open Sans', sans-serif;
+
+// main colors for typography
+@title_color: #29c6ce;
+@secondary_title_color: #fff;
+@faded_color: #999;
+
+
+body {
+	background: @background;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.3em;
+} 
+
+// links
+a:link, a:visited, a:hover, a:active {
+	text-decoration:underline;
+	color: @title_color;
+}
+
+
+// styles for titleslides
+.titleslide {
+
+	text-align: center;
+
+	h1 {
+		font-size: 5em;
+		color: @title_color;
+		font-family: @title_font_family;
+		font-weight: bold;
+		text-shadow: inset 0px 2px 2px #222;
+		line-height: 1;
+	}
+
+	h3 {
+		font-size: 2em;
+		font-family: @title_font_family;
+		line-height: 1;
+		color: @secondary_title_color;
+	}
+}
+
+
+// styles for regular slides
+.basicslide {
+	
+	h1, h2 {
+		padding: 0.5em;
+		border-bottom: 2px solid @faded_color;
+		color: @title_color;
+		font-weight: bold;
+		font-family: @title_font_family;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	p, ul, ol {
+		color: #fff;
+		padding: 0 0 1em 0;
+		font-family: @body_font_family;
+	}
+}
+
+// use two columns in basic slides
+.twocol {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+}
+
+.twocol.last {
+	margin-right: 0;
+	margin-left: 2%;
+}
+
+// styles for captioned slides
+
+.backgroundimg {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.slidecaption {
+	position: absolute;
+	left: 0;
+	right: 0;
+
+	h2 {
+		font-size: 4em;
+		padding: 0.5em;
+		margin-left: 48px;
+		margin-right: 48px;
+	}
+}
+
+.dimmed_light {
+	background: rgba(255,255,255,0.5);
+	color: #111 !important;
+}
+
+.dimmed_dark {
+	background: rgba(0,0,0,0.5);
+	color: #fff !important;
+}
+
+.slidecaption.bottom {
+	bottom: 0;
+}
+
+// styles for slides with small content
+
+.smallcontentslide {
+	h1, h2 {
+		text-align: center;
+		font-size: 1.7em;
+		font: @title_font_family;
+		color: @title_color;
+	}
+}
+
+// styles for tables
+
+table {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: center;
+	color: #fff;
+}
+
+th, td {
+	padding: 10px 20px;
+}
+
+th {
+	border-bottom: 2px solid @faded_color;
+	color: @title_color;
+	font-weight: regular;
+}
+
+td.linenumber {
+	color: @faded_color;
+	width: 30px;
+	border-right: 1px solid @faded_color;
+}
+
+.alignleft, {
+	text-align: left;
+}
+
+.alignright {
+	text-align: right;
+}
+
+tr.odd {
+	background: rgba(255,255,255,0.04)
+}
+
+// styles for aligning content vertically and horizontally
+
+.vcenter {
+	padding: 0 48px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.hcenter {
+	margin: 0 auto;
+}
+
+
+// styles for code blocks. see also prettify.css
+
+pre {
+	border-radius: 5px;
+	background: rgba(0,0,0,0.3);
+}
+
+ol.linenums {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	font-size: 1em;
+}
+
+
+// styles for charts. see also deckjs/*.css
+
+.chartcontainer {
+	margin-top: 18px;
+	padding: 10px; 
+	border: 1px solid #444; 
+	background: rgba(0,0,0,0.3); 
+	box-shadow: inset 5px 5px 8px #222;
+	position: relative;
+	border-radius: 5px;
+}
+
+.rickshaw_graph .detail .x_label { display: none }

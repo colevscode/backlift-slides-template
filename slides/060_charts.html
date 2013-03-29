@@ -1,0 +1,45 @@
+<section class="slide basicslide" id="charts">
+	<h2>Charts use rickshaw.js</h2>
+	
+	<div class="twocol">
+		<div id="chart">
+			<div class="chartcontainer">
+				<div id="chart_container" style="margin: 15px;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="twocol last">
+<pre class="prettyprint linenums" style="height: 300px; overflow-y: scroll">
+&lt;div id="chart"&gt;
+	&lt;div class="chartcontainer"&gt;
+		&lt;div id="chart_container" style="margin: 15px;"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var plotData = [{
+		name: 'Fibonacci',
+		data: convertPlotData([0,1,1,2,3,4,7,11,28],1,1)
+	}, {
+		name: 'Random data',
+		data: convertPlotData([10,3,15,5,20,3,5],1,1)
+	}];
+
+	renderLinePlot(document.querySelector('#chart_container'), plotData);
+&lt;/script&gt;
+</pre>
+	</div> <!-- / twocol -->
+
+</section>
+
+<script>
+var plotData = [{
+		name: 'Fibonacci',
+		data: convertPlotData([0,1,1,2,3,4,7,11,28],1,1)
+	}, {
+		name: 'Random data',
+		data: convertPlotData([10,3,15,5,20,3,5],1,1)
+	}];
+
+	renderLinePlot(document.querySelector('#chart_container'), plotData);
+</script>
